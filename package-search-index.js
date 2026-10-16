@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"sakaboba"},{"l":"sakaboba.dao"},{"l":"sakaboba.model"},{"l":"sakaboba.ui"}];updateSearchResults();
