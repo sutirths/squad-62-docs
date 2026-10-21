@@ -128,6 +128,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">InventoryPanel</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JPanel.html" title="class or interface in javax.swing" class="external-link">JPanel</a></span></div>
+<div class="block">Inventory maintenance: list ingredients, add new ones, and edit name, quantity and unit. Database work runs outside Swing's event thread.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -151,7 +152,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private static final record&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="InventoryPanel.ViewState.html" class="type-name-link" title="class in sakaboba.ui">InventoryPanel.ViewState</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Result of a background task.</div>
+</div>
 </div>
 <div class="inherited-list">
 <h3 id="nested-classes-inherited-from-class-javax.swing.JPanel">Nested classes/interfaces inherited from class&nbsp;javax.swing.<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JPanel.html" title="class or interface in javax.swing" class="external-link">JPanel</a></h3>
@@ -178,46 +181,74 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></code></div>
 <div class="col-second even-row-color"><code><a href="#add" class="member-name-link">add</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Button that adds a new ingredient from the form.</div>
+</div>
 <div class="col-first odd-row-color"><code>private boolean</code></div>
 <div class="col-second odd-row-color"><code><a href="#busy" class="member-name-link">busy</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">True while a background task runs, so controls are disabled.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></code></div>
 <div class="col-second even-row-color"><code><a href="#clear" class="member-name-link">clear</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Button that clears the selection and the form.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#count" class="member-name-link">count</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Label showing how many ingredients are listed.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="../dao/InventoryDao.html" title="class in sakaboba.dao">InventoryDao</a></code></div>
 <div class="col-second even-row-color"><code><a href="#dao" class="member-name-link">dao</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Data access for ingredients.</div>
+</div>
 <div class="col-first odd-row-color"><code>private static final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.logging/java/util/logging/Logger.html" title="class or interface in java.util.logging" class="external-link">Logger</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#LOG" class="member-name-link">LOG</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Logger for table refresh failures.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableModel.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableModel</a></code></div>
 <div class="col-second even-row-color"><code><a href="#model" class="member-name-link">model</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Read-only table model with ID, name, quantity and unit columns.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#name" class="member-name-link">name</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Input for the ingredient name.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a></code></div>
 <div class="col-second even-row-color"><code><a href="#quantity" class="member-name-link">quantity</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Input for the quantity on hand.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#refresh" class="member-name-link">refresh</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Button that reloads the ingredient list.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a></code></div>
 <div class="col-second even-row-color"><code><a href="#status" class="member-name-link">status</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Label showing the latest success or error message.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#table" class="member-name-link">table</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Table of ingredients.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#unit" class="member-name-link">unit</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Picker for the unit of measure.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#update" class="member-name-link">update</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Button that saves the form onto the selected ingredient.</div>
+</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-javax.swing.JComponent">Fields inherited from class&nbsp;javax.swing.<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComponent.html" title="class or interface in javax.swing" class="external-link">JComponent</a></h3>
@@ -239,9 +270,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">InventoryPanel</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates the panel backed by the project database.</div>
+</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(sakaboba.dao.InventoryDao)" class="member-name-link">InventoryPanel</a><wbr>(<a href="../dao/InventoryDao.html" title="class in sakaboba.dao">InventoryDao</a>&nbsp;dao)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Creates the panel with the given data access object, which lets tests supply a stand-in.</div>
+</div>
 </div>
 </section>
 </li>
@@ -258,34 +293,52 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearForm()" class="member-name-link">clearForm</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Clears the table selection and the form fields.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#enableControls()" class="member-name-link">enableControls</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Enables or disables each control based on whether a task is running and what is selected.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadInventory()" class="member-name-link">loadInventory</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads all ingredients into the table on a background thread.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mutate(java.lang.String,java.util.concurrent.Callable)" class="member-name-link">mutate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;loading,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/concurrent/Callable.html" title="class or interface in java.util.concurrent" class="external-link">Callable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;operation)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Runs a change and then reloads the inventory list, so the table shows the saved result.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#runTask(java.lang.String,java.util.concurrent.Callable)" class="member-name-link">runTask</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;loading,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/concurrent/Callable.html" title="class or interface in java.util.concurrent" class="external-link">Callable</a>&lt;<a href="InventoryPanel.ViewState.html" title="class in sakaboba.ui">InventoryPanel.ViewState</a>&gt;&nbsp;task)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Runs a database task on a background thread, disabling controls meanwhile.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveIngredient(boolean)" class="member-name-link">saveIngredient</a><wbr>(boolean&nbsp;editing)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a new ingredient or updates the selected one, using the form values.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectedRow()" class="member-name-link">selectedRow</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the selected row converted to a model index, which differs from the view index when sorted.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectIngredient()" class="member-name-link">selectIngredient</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Copies the selected ingredient into the form fields.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showStatus(java.lang.String,boolean)" class="member-name-link">showStatus</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
  boolean&nbsp;error)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Shows a message in the status label.</div>
+</div>
 </div>
 </div>
 </div>
@@ -320,6 +373,7 @@ loadScripts(document, 'script');</script>
 <h3>LOG</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.logging/java/util/logging/Logger.html" title="class or interface in java.util.logging" class="external-link">Logger</a></span>&nbsp;<span class="element-name">LOG</span></div>
+<div class="block">Logger for table refresh failures.</div>
 </div>
 </section>
 </li>
@@ -328,6 +382,7 @@ loadScripts(document, 'script');</script>
 <h3>dao</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="../dao/InventoryDao.html" title="class in sakaboba.dao">InventoryDao</a></span>&nbsp;<span class="element-name">dao</span></div>
+<div class="block">Data access for ingredients.</div>
 </div>
 </section>
 </li>
@@ -336,6 +391,7 @@ loadScripts(document, 'script');</script>
 <h3>model</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableModel.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableModel</a></span>&nbsp;<span class="element-name">model</span></div>
+<div class="block">Read-only table model with ID, name, quantity and unit columns.</div>
 </div>
 </section>
 </li>
@@ -344,6 +400,7 @@ loadScripts(document, 'script');</script>
 <h3>table</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a></span>&nbsp;<span class="element-name">table</span></div>
+<div class="block">Table of ingredients.</div>
 </div>
 </section>
 </li>
@@ -352,6 +409,7 @@ loadScripts(document, 'script');</script>
 <h3>name</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a></span>&nbsp;<span class="element-name">name</span></div>
+<div class="block">Input for the ingredient name.</div>
 </div>
 </section>
 </li>
@@ -360,6 +418,7 @@ loadScripts(document, 'script');</script>
 <h3>quantity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a></span>&nbsp;<span class="element-name">quantity</span></div>
+<div class="block">Input for the quantity on hand.</div>
 </div>
 </section>
 </li>
@@ -368,6 +427,7 @@ loadScripts(document, 'script');</script>
 <h3>unit</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">unit</span></div>
+<div class="block">Picker for the unit of measure.</div>
 </div>
 </section>
 </li>
@@ -376,6 +436,7 @@ loadScripts(document, 'script');</script>
 <h3>status</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a></span>&nbsp;<span class="element-name">status</span></div>
+<div class="block">Label showing the latest success or error message.</div>
 </div>
 </section>
 </li>
@@ -384,6 +445,7 @@ loadScripts(document, 'script');</script>
 <h3>count</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a></span>&nbsp;<span class="element-name">count</span></div>
+<div class="block">Label showing how many ingredients are listed.</div>
 </div>
 </section>
 </li>
@@ -392,6 +454,7 @@ loadScripts(document, 'script');</script>
 <h3>refresh</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></span>&nbsp;<span class="element-name">refresh</span></div>
+<div class="block">Button that reloads the ingredient list.</div>
 </div>
 </section>
 </li>
@@ -400,6 +463,7 @@ loadScripts(document, 'script');</script>
 <h3>add</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></span>&nbsp;<span class="element-name">add</span></div>
+<div class="block">Button that adds a new ingredient from the form.</div>
 </div>
 </section>
 </li>
@@ -408,6 +472,7 @@ loadScripts(document, 'script');</script>
 <h3>update</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></span>&nbsp;<span class="element-name">update</span></div>
+<div class="block">Button that saves the form onto the selected ingredient.</div>
 </div>
 </section>
 </li>
@@ -416,6 +481,7 @@ loadScripts(document, 'script');</script>
 <h3>clear</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></span>&nbsp;<span class="element-name">clear</span></div>
+<div class="block">Button that clears the selection and the form.</div>
 </div>
 </section>
 </li>
@@ -424,6 +490,7 @@ loadScripts(document, 'script');</script>
 <h3>busy</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">busy</span></div>
+<div class="block">True while a background task runs, so controls are disabled.</div>
 </div>
 </section>
 </li>
@@ -440,6 +507,7 @@ loadScripts(document, 'script');</script>
 <h3>InventoryPanel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">InventoryPanel</span>()</div>
+<div class="block">Creates the panel backed by the project database.</div>
 </div>
 </section>
 </li>
@@ -448,6 +516,11 @@ loadScripts(document, 'script');</script>
 <h3>InventoryPanel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">InventoryPanel</span><wbr><span class="parameters">(<a href="../dao/InventoryDao.html" title="class in sakaboba.dao">InventoryDao</a>&nbsp;dao)</span></div>
+<div class="block">Creates the panel with the given data access object, which lets tests supply a stand-in.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>dao</code> - source and sink of inventory data</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -464,6 +537,7 @@ loadScripts(document, 'script');</script>
 <h3>selectIngredient</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">selectIngredient</span>()</div>
+<div class="block">Copies the selected ingredient into the form fields.</div>
 </div>
 </section>
 </li>
@@ -472,6 +546,11 @@ loadScripts(document, 'script');</script>
 <h3>selectedRow</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">selectedRow</span>()</div>
+<div class="block">Returns the selected row converted to a model index, which differs from the view index when sorted.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the model row index, or -1 if nothing is selected</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -480,6 +559,7 @@ loadScripts(document, 'script');</script>
 <h3>clearForm</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clearForm</span>()</div>
+<div class="block">Clears the table selection and the form fields.</div>
 </div>
 </section>
 </li>
@@ -488,6 +568,7 @@ loadScripts(document, 'script');</script>
 <h3>loadInventory</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadInventory</span>()</div>
+<div class="block">Loads all ingredients into the table on a background thread.</div>
 </div>
 </section>
 </li>
@@ -496,6 +577,11 @@ loadScripts(document, 'script');</script>
 <h3>saveIngredient</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">saveIngredient</span><wbr><span class="parameters">(boolean&nbsp;editing)</span></div>
+<div class="block">Adds a new ingredient or updates the selected one, using the form values.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>editing</code> - true to update the selected ingredient, false to add a new one</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -505,6 +591,13 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">mutate</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;loading,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/concurrent/Callable.html" title="class or interface in java.util.concurrent" class="external-link">Callable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;operation)</span></div>
+<div class="block">Runs a change and then reloads the inventory list, so the table shows the saved result.
+ If only the reload fails, the change is still reported as saved.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>loading</code> - status text shown while the task runs</dd>
+<dd><code>operation</code> - the change to make; returns the success message</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -514,6 +607,13 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">runTask</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;loading,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/concurrent/Callable.html" title="class or interface in java.util.concurrent" class="external-link">Callable</a>&lt;<a href="InventoryPanel.ViewState.html" title="class in sakaboba.ui">InventoryPanel.ViewState</a>&gt;&nbsp;task)</span></div>
+<div class="block">Runs a database task on a background thread, disabling controls meanwhile. When it finishes
+ the inventory table is refreshed from the result and any error is shown in the status label.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>loading</code> - status text shown while the task runs</dd>
+<dd><code>task</code> - work to run off the event thread, returning the new view state</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -522,6 +622,7 @@ loadScripts(document, 'script');</script>
 <h3>enableControls</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">enableControls</span>()</div>
+<div class="block">Enables or disables each control based on whether a task is running and what is selected.</div>
 </div>
 </section>
 </li>
@@ -531,6 +632,12 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">showStatus</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
  boolean&nbsp;error)</span></div>
+<div class="block">Shows a message in the status label.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>message</code> - text to show</dd>
+<dd><code>error</code> - true to show it in the error colour</dd>
+</dl>
 </div>
 </section>
 </li>

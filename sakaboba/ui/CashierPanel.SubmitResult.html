@@ -98,6 +98,11 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-receipt">receipt</span></code> - the saved order's ID and total</dd>
+<dd><code><span id="param-orders">orders</span></code> - refreshed list of today's orders, or null if refreshing it failed</dd>
+</dl>
+<dl class="notes">
 <dt>Enclosing class:</dt>
 <dd><code><a href="CashierPanel.html" title="class in sakaboba.ui">CashierPanel</a></code></dd>
 </dl>
@@ -105,6 +110,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">private static record </span><span class="element-name type-name-label">CashierPanel.SubmitResult</span>(<a href="../model/OrderReceipt.html" title="class in sakaboba.model">OrderReceipt</a>&nbsp;receipt, <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/OrderSummary.html" title="class in sakaboba.model">OrderSummary</a>&gt;&nbsp;orders)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Outcome of a successful submit.</div>
 </div>
 </section>
 <section class="summary">
@@ -121,12 +127,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/OrderSummary.html" title="class in sakaboba.model">OrderSummary</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#orders" class="member-name-link">orders</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>orders</code> record component.</div>
+<div class="block">The field for the <a href="#param-orders"><code>orders</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color"><code>private final <a href="../model/OrderReceipt.html" title="class in sakaboba.model">OrderReceipt</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#receipt" class="member-name-link">receipt</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The field for the <code>receipt</code> record component.</div>
+<div class="block">The field for the <a href="#param-receipt"><code>receipt</code></a> record component.</div>
 </div>
 </div>
 </section>
@@ -173,12 +179,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/OrderSummary.html" title="class in sakaboba.model">OrderSummary</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#orders()" class="member-name-link">orders</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>orders</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-orders"><code>orders</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/OrderReceipt.html" title="class in sakaboba.model">OrderReceipt</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#receipt()" class="member-name-link">receipt</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>receipt</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-receipt"><code>receipt</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -207,7 +213,7 @@ loadScripts(document, 'script');</script>
 <h3>receipt</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="../model/OrderReceipt.html" title="class in sakaboba.model">OrderReceipt</a></span>&nbsp;<span class="element-name">receipt</span></div>
-<div class="block">The field for the <code>receipt</code> record component.</div>
+<div class="block">The field for the <a href="#param-receipt"><code>receipt</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -216,7 +222,7 @@ loadScripts(document, 'script');</script>
 <h3>orders</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/OrderSummary.html" title="class in sakaboba.model">OrderSummary</a>&gt;</span>&nbsp;<span class="element-name">orders</span></div>
-<div class="block">The field for the <code>orders</code> record component.</div>
+<div class="block">The field for the <a href="#param-orders"><code>orders</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -237,8 +243,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>SubmitResult</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>receipt</code> - the value for the <code>receipt</code> record component</dd>
-<dd><code>orders</code> - the value for the <code>orders</code> record component</dd>
+<dd><code>receipt</code> - the value for the <a href="#param-receipt"><code>receipt</code></a> record component</dd>
+<dd><code>orders</code> - the value for the <a href="#param-orders"><code>orders</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -303,10 +309,10 @@ loadScripts(document, 'script');</script>
 <h3>receipt</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/OrderReceipt.html" title="class in sakaboba.model">OrderReceipt</a></span>&nbsp;<span class="element-name">receipt</span>()</div>
-<div class="block">Returns the value of the <code>receipt</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-receipt"><code>receipt</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>receipt</code> record component</dd>
+<dd>the value of the <a href="#param-receipt"><code>receipt</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -316,10 +322,10 @@ loadScripts(document, 'script');</script>
 <h3>orders</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/OrderSummary.html" title="class in sakaboba.model">OrderSummary</a>&gt;</span>&nbsp;<span class="element-name">orders</span>()</div>
-<div class="block">Returns the value of the <code>orders</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-orders"><code>orders</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>orders</code> record component</dd>
+<dd>the value of the <a href="#param-orders"><code>orders</code></a> record component</dd>
 </dl>
 </div>
 </section>

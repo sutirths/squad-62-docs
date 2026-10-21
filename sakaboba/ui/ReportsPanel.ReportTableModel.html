@@ -125,7 +125,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private final <a href="../model/ReportData.html" title="class in sakaboba.model">ReportData</a></code></div>
 <div class="col-second even-row-color"><code><a href="#data" class="member-name-link">data</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Report values being displayed.</div>
+</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-javax.swing.table.AbstractTableModel">Fields inherited from class&nbsp;javax.swing.table.<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/AbstractTableModel.html" title="class or interface in javax.swing.table" class="external-link">AbstractTableModel</a></h3>
@@ -141,7 +143,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(sakaboba.model.ReportData)" class="member-name-link">ReportTableModel</a><wbr>(<a href="../model/ReportData.html" title="class in sakaboba.model">ReportData</a>&nbsp;data)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Wraps report values for display in a table.</div>
+</div>
 </div>
 </section>
 </li>
@@ -201,6 +205,7 @@ loadScripts(document, 'script');</script>
 <h3>data</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="../model/ReportData.html" title="class in sakaboba.model">ReportData</a></span>&nbsp;<span class="element-name">data</span></div>
+<div class="block">Report values being displayed.</div>
 </div>
 </section>
 </li>
@@ -217,6 +222,11 @@ loadScripts(document, 'script');</script>
 <h3>ReportTableModel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="element-name">ReportTableModel</span><wbr><span class="parameters">(<a href="../model/ReportData.html" title="class in sakaboba.model">ReportData</a>&nbsp;data)</span></div>
+<div class="block">Wraps report values for display in a table.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>data</code> - columns and rows to show</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -233,6 +243,10 @@ loadScripts(document, 'script');</script>
 <h3>getRowCount</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getRowCount</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the number of report rows</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -241,6 +255,10 @@ loadScripts(document, 'script');</script>
 <h3>getColumnCount</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getColumnCount</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the number of report columns</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -254,6 +272,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/TableModel.html#getColumnName(int)" title="class or interface in javax.swing.table" class="external-link">getColumnName</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/TableModel.html" title="class or interface in javax.swing.table" class="external-link">TableModel</a></code></dd>
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/AbstractTableModel.html#getColumnName(int)" title="class or interface in javax.swing.table" class="external-link">getColumnName</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/AbstractTableModel.html" title="class or interface in javax.swing.table" class="external-link">AbstractTableModel</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>column</code> - column index</dd>
+<dt>Returns:</dt>
+<dd>the column's heading</dd>
 </dl>
 </div>
 </section>
@@ -268,6 +290,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/TableModel.html#getColumnClass(int)" title="class or interface in javax.swing.table" class="external-link">getColumnClass</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/TableModel.html" title="class or interface in javax.swing.table" class="external-link">TableModel</a></code></dd>
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/AbstractTableModel.html#getColumnClass(int)" title="class or interface in javax.swing.table" class="external-link">getColumnClass</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/AbstractTableModel.html" title="class or interface in javax.swing.table" class="external-link">AbstractTableModel</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>column</code> - column index</dd>
+<dt>Returns:</dt>
+<dd>the Java type of the column, which drives sorting</dd>
 </dl>
 </div>
 </section>
@@ -278,6 +304,13 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getValueAt</span><wbr><span class="parameters">(int&nbsp;row,
  int&nbsp;column)</span></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>row</code> - row index</dd>
+<dd><code>column</code> - column index</dd>
+<dt>Returns:</dt>
+<dd>the value in that cell</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -292,6 +325,11 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/TableModel.html#isCellEditable(int,int)" title="class or interface in javax.swing.table" class="external-link">isCellEditable</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/TableModel.html" title="class or interface in javax.swing.table" class="external-link">TableModel</a></code></dd>
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/AbstractTableModel.html#isCellEditable(int,int)" title="class or interface in javax.swing.table" class="external-link">isCellEditable</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/AbstractTableModel.html" title="class or interface in javax.swing.table" class="external-link">AbstractTableModel</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>row</code> - row index</dd>
+<dd><code>column</code> - column index</dd>
+<dt>Returns:</dt>
+<dd>always false; report cells cannot be edited</dd>
 </dl>
 </div>
 </section>

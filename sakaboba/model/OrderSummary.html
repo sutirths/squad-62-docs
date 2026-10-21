@@ -102,6 +102,14 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-id">id</span></code> - order ID</dd>
+<dd><code><span id="param-createdAt">createdAt</span></code> - when the order was placed</dd>
+<dd><code><span id="param-total">total</span></code> - order total</dd>
+<dd><code><span id="param-paymentMethod">paymentMethod</span></code> - how the customer paid</dd>
+<dd><code><span id="param-status">status</span></code> - completed, voided or returned</dd>
+</dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">OrderSummary</span>(int&nbsp;id, <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a>&nbsp;createdAt, <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;total, <a href="PaymentMethod.html" title="enum class in sakaboba.model">PaymentMethod</a>&nbsp;paymentMethod, <a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a>&nbsp;status)
@@ -123,27 +131,27 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a></code></div>
 <div class="col-second even-row-color"><code><a href="#createdAt" class="member-name-link">createdAt</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>createdAt</code> record component.</div>
+<div class="block">The field for the <a href="#param-createdAt"><code>createdAt</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color"><code>private final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#id" class="member-name-link">id</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The field for the <code>id</code> record component.</div>
+<div class="block">The field for the <a href="#param-id"><code>id</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color"><code>private final <a href="PaymentMethod.html" title="enum class in sakaboba.model">PaymentMethod</a></code></div>
 <div class="col-second even-row-color"><code><a href="#paymentMethod" class="member-name-link">paymentMethod</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>paymentMethod</code> record component.</div>
+<div class="block">The field for the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color"><code>private final <a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#status" class="member-name-link">status</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The field for the <code>status</code> record component.</div>
+<div class="block">The field for the <a href="#param-status"><code>status</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color"><code><a href="#total" class="member-name-link">total</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>total</code> record component.</div>
+<div class="block">The field for the <a href="#param-total"><code>total</code></a> record component.</div>
 </div>
 </div>
 </section>
@@ -181,7 +189,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdAt()" class="member-name-link">createdAt</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>createdAt</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-createdAt"><code>createdAt</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
@@ -196,17 +204,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id()" class="member-name-link">id</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>id</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-id"><code>id</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PaymentMethod.html" title="enum class in sakaboba.model">PaymentMethod</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#paymentMethod()" class="member-name-link">paymentMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>paymentMethod</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#status()" class="member-name-link">status</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>status</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-status"><code>status</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -216,7 +224,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#total()" class="member-name-link">total</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>total</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-total"><code>total</code></a> record component.</div>
 </div>
 </div>
 </div>
@@ -240,7 +248,7 @@ loadScripts(document, 'script');</script>
 <h3>id</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">id</span></div>
-<div class="block">The field for the <code>id</code> record component.</div>
+<div class="block">The field for the <a href="#param-id"><code>id</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -249,7 +257,7 @@ loadScripts(document, 'script');</script>
 <h3>createdAt</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a></span>&nbsp;<span class="element-name">createdAt</span></div>
-<div class="block">The field for the <code>createdAt</code> record component.</div>
+<div class="block">The field for the <a href="#param-createdAt"><code>createdAt</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -258,7 +266,7 @@ loadScripts(document, 'script');</script>
 <h3>total</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">total</span></div>
-<div class="block">The field for the <code>total</code> record component.</div>
+<div class="block">The field for the <a href="#param-total"><code>total</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -267,7 +275,7 @@ loadScripts(document, 'script');</script>
 <h3>paymentMethod</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="PaymentMethod.html" title="enum class in sakaboba.model">PaymentMethod</a></span>&nbsp;<span class="element-name">paymentMethod</span></div>
-<div class="block">The field for the <code>paymentMethod</code> record component.</div>
+<div class="block">The field for the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -276,7 +284,7 @@ loadScripts(document, 'script');</script>
 <h3>status</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></span>&nbsp;<span class="element-name">status</span></div>
-<div class="block">The field for the <code>status</code> record component.</div>
+<div class="block">The field for the <a href="#param-status"><code>status</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -300,11 +308,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>OrderSummary</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>id</code> - the value for the <code>id</code> record component</dd>
-<dd><code>createdAt</code> - the value for the <code>createdAt</code> record component</dd>
-<dd><code>total</code> - the value for the <code>total</code> record component</dd>
-<dd><code>paymentMethod</code> - the value for the <code>paymentMethod</code> record component</dd>
-<dd><code>status</code> - the value for the <code>status</code> record component</dd>
+<dd><code>id</code> - the value for the <a href="#param-id"><code>id</code></a> record component</dd>
+<dd><code>createdAt</code> - the value for the <a href="#param-createdAt"><code>createdAt</code></a> record component</dd>
+<dd><code>total</code> - the value for the <a href="#param-total"><code>total</code></a> record component</dd>
+<dd><code>paymentMethod</code> - the value for the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component</dd>
+<dd><code>status</code> - the value for the <a href="#param-status"><code>status</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -369,10 +377,10 @@ loadScripts(document, 'script');</script>
 <h3>id</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">id</span>()</div>
-<div class="block">Returns the value of the <code>id</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-id"><code>id</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>id</code> record component</dd>
+<dd>the value of the <a href="#param-id"><code>id</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -382,10 +390,10 @@ loadScripts(document, 'script');</script>
 <h3>createdAt</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a></span>&nbsp;<span class="element-name">createdAt</span>()</div>
-<div class="block">Returns the value of the <code>createdAt</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-createdAt"><code>createdAt</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>createdAt</code> record component</dd>
+<dd>the value of the <a href="#param-createdAt"><code>createdAt</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -395,10 +403,10 @@ loadScripts(document, 'script');</script>
 <h3>total</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">total</span>()</div>
-<div class="block">Returns the value of the <code>total</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-total"><code>total</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>total</code> record component</dd>
+<dd>the value of the <a href="#param-total"><code>total</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -408,10 +416,10 @@ loadScripts(document, 'script');</script>
 <h3>paymentMethod</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentMethod.html" title="enum class in sakaboba.model">PaymentMethod</a></span>&nbsp;<span class="element-name">paymentMethod</span>()</div>
-<div class="block">Returns the value of the <code>paymentMethod</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>paymentMethod</code> record component</dd>
+<dd>the value of the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -421,10 +429,10 @@ loadScripts(document, 'script');</script>
 <h3>status</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></span>&nbsp;<span class="element-name">status</span>()</div>
-<div class="block">Returns the value of the <code>status</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-status"><code>status</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>status</code> record component</dd>
+<dd>the value of the <a href="#param-status"><code>status</code></a> record component</dd>
 </dl>
 </div>
 </section>

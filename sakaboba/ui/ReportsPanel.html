@@ -155,7 +155,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private static final class&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="ReportsPanel.ReportCellRenderer.html" class="type-name-link" title="class in sakaboba.ui">ReportsPanel.ReportCellRenderer</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Right-aligns numbers, formats currency and percentages, and highlights the TOTAL row.</div>
+</div>
 <div class="col-first odd-row-color"><code>private static class&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="ReportsPanel.ReportTableModel.html" class="type-name-link" title="class in sakaboba.ui">ReportsPanel.ReportTableModel</a></code></div>
 <div class="col-last odd-row-color">
@@ -187,40 +189,64 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private boolean</code></div>
 <div class="col-second even-row-color"><code><a href="#busy" class="member-name-link">busy</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">True while a background task runs, so controls are disabled.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="BarChart.html" title="class in sakaboba.ui">BarChart</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#chart" class="member-name-link">chart</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Bar chart shown for the product usage report.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JScrollPane.html" title="class or interface in javax.swing" class="external-link">JScrollPane</a></code></div>
 <div class="col-second even-row-color"><code><a href="#chartScroll" class="member-name-link">chartScroll</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Scroll pane wrapping the chart, which is added as a tab only when needed.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a><wbr>&lt;<a href="../model/ReportType.html" title="enum class in sakaboba.model">ReportType</a>&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#choice" class="member-name-link">choice</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Picker for which report to run.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="../dao/ReportDao.html" title="class in sakaboba.dao">ReportDao</a></code></div>
 <div class="col-second even-row-color"><code><a href="#dao" class="member-name-link">dao</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Data source for report queries and the available date range.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#end" class="member-name-link">end</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Input for the last date, as YYYY-MM-DD.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></code></div>
 <div class="col-second even-row-color"><code><a href="#generate" class="member-name-link">generate</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Button that runs the selected report.</div>
+</div>
 <div class="col-first odd-row-color"><code>private boolean</code></div>
 <div class="col-second odd-row-color"><code><a href="#hasResults" class="member-name-link">hasResults</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">True while the table shows results for the current filters.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTabbedPane.html" title="class or interface in javax.swing" class="external-link">JTabbedPane</a></code></div>
 <div class="col-second even-row-color"><code><a href="#results" class="member-name-link">results</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Tabs holding the table and, for product usage, the chart.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#start" class="member-name-link">start</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Input for the first date, as YYYY-MM-DD.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a></code></div>
 <div class="col-second even-row-color"><code><a href="#status" class="member-name-link">status</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Label showing the latest success or error message.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#table" class="member-name-link">table</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Table showing the report rows.</div>
+</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-javax.swing.JComponent">Fields inherited from class&nbsp;javax.swing.<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComponent.html" title="class or interface in javax.swing" class="external-link">JComponent</a></h3>
@@ -291,7 +317,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showChart(java.lang.String)" class="member-name-link">showChart</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds the chart as a tab with the given title and selects it.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showStatus(java.lang.String,boolean)" class="member-name-link">showStatus</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
  boolean&nbsp;error)</code></div>
@@ -332,6 +360,7 @@ loadScripts(document, 'script');</script>
 <h3>dao</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="../dao/ReportDao.html" title="class in sakaboba.dao">ReportDao</a></span>&nbsp;<span class="element-name">dao</span></div>
+<div class="block">Data source for report queries and the available date range.</div>
 </div>
 </section>
 </li>
@@ -340,6 +369,7 @@ loadScripts(document, 'script');</script>
 <h3>choice</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="../model/ReportType.html" title="enum class in sakaboba.model">ReportType</a>&gt;</span>&nbsp;<span class="element-name">choice</span></div>
+<div class="block">Picker for which report to run.</div>
 </div>
 </section>
 </li>
@@ -348,6 +378,7 @@ loadScripts(document, 'script');</script>
 <h3>start</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a></span>&nbsp;<span class="element-name">start</span></div>
+<div class="block">Input for the first date, as YYYY-MM-DD.</div>
 </div>
 </section>
 </li>
@@ -356,6 +387,7 @@ loadScripts(document, 'script');</script>
 <h3>end</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a></span>&nbsp;<span class="element-name">end</span></div>
+<div class="block">Input for the last date, as YYYY-MM-DD.</div>
 </div>
 </section>
 </li>
@@ -364,6 +396,7 @@ loadScripts(document, 'script');</script>
 <h3>generate</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a></span>&nbsp;<span class="element-name">generate</span></div>
+<div class="block">Button that runs the selected report.</div>
 </div>
 </section>
 </li>
@@ -372,6 +405,7 @@ loadScripts(document, 'script');</script>
 <h3>table</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a></span>&nbsp;<span class="element-name">table</span></div>
+<div class="block">Table showing the report rows.</div>
 </div>
 </section>
 </li>
@@ -380,6 +414,7 @@ loadScripts(document, 'script');</script>
 <h3>status</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a></span>&nbsp;<span class="element-name">status</span></div>
+<div class="block">Label showing the latest success or error message.</div>
 </div>
 </section>
 </li>
@@ -388,6 +423,7 @@ loadScripts(document, 'script');</script>
 <h3>chart</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="BarChart.html" title="class in sakaboba.ui">BarChart</a></span>&nbsp;<span class="element-name">chart</span></div>
+<div class="block">Bar chart shown for the product usage report.</div>
 </div>
 </section>
 </li>
@@ -396,6 +432,7 @@ loadScripts(document, 'script');</script>
 <h3>results</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTabbedPane.html" title="class or interface in javax.swing" class="external-link">JTabbedPane</a></span>&nbsp;<span class="element-name">results</span></div>
+<div class="block">Tabs holding the table and, for product usage, the chart.</div>
 </div>
 </section>
 </li>
@@ -404,6 +441,7 @@ loadScripts(document, 'script');</script>
 <h3>chartScroll</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JScrollPane.html" title="class or interface in javax.swing" class="external-link">JScrollPane</a></span>&nbsp;<span class="element-name">chartScroll</span></div>
+<div class="block">Scroll pane wrapping the chart, which is added as a tab only when needed.</div>
 </div>
 </section>
 </li>
@@ -412,6 +450,7 @@ loadScripts(document, 'script');</script>
 <h3>busy</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">busy</span></div>
+<div class="block">True while a background task runs, so controls are disabled.</div>
 </div>
 </section>
 </li>
@@ -420,6 +459,7 @@ loadScripts(document, 'script');</script>
 <h3>hasResults</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasResults</span></div>
+<div class="block">True while the table shows results for the current filters.</div>
 </div>
 </section>
 </li>
@@ -494,6 +534,11 @@ loadScripts(document, 'script');</script>
 <h3>showChart</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">showChart</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</span></div>
+<div class="block">Adds the chart as a tab with the given title and selects it.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>title</code> - tab title</dd>
+</dl>
 </div>
 </section>
 </li>

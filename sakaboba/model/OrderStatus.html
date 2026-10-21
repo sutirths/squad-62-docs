@@ -135,11 +135,17 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Enum Constant</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#COMPLETED" class="member-name-link">COMPLETED</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">The order was placed and counts toward sales.</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="#RETURNED" class="member-name-link">RETURNED</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">The order was returned after completion and no longer counts toward sales.</div>
+</div>
 <div class="col-first even-row-color"><code><a href="#VOIDED" class="member-name-link">VOIDED</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">The order was cancelled and no longer counts toward sales.</div>
+</div>
 </div>
 </section>
 </li>
@@ -154,7 +160,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#label" class="member-name-link">label</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Text stored in the database and shown to users.</div>
+</div>
 </div>
 </section>
 </li>
@@ -169,7 +177,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private </code></div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String)" class="member-name-link">OrderStatus</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;label)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates the constant with its stored label.</div>
+</div>
 </div>
 </section>
 </li>
@@ -186,13 +196,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromLabel(java.lang.String)" class="member-name-link">fromLabel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;label)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Finds the status stored under a label.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#label()" class="member-name-link">label</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the stored and displayed text.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the label, so combo boxes and tables show readable text.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -229,6 +245,7 @@ the order they are declared.</div>
 <h3>COMPLETED</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></span>&nbsp;<span class="element-name">COMPLETED</span></div>
+<div class="block">The order was placed and counts toward sales.</div>
 </div>
 </section>
 </li>
@@ -237,6 +254,7 @@ the order they are declared.</div>
 <h3>VOIDED</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></span>&nbsp;<span class="element-name">VOIDED</span></div>
+<div class="block">The order was cancelled and no longer counts toward sales.</div>
 </div>
 </section>
 </li>
@@ -245,6 +263,7 @@ the order they are declared.</div>
 <h3>RETURNED</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></span>&nbsp;<span class="element-name">RETURNED</span></div>
+<div class="block">The order was returned after completion and no longer counts toward sales.</div>
 </div>
 </section>
 </li>
@@ -261,6 +280,7 @@ the order they are declared.</div>
 <h3>label</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">label</span></div>
+<div class="block">Text stored in the database and shown to users.</div>
 </div>
 </section>
 </li>
@@ -277,6 +297,11 @@ the order they are declared.</div>
 <h3>OrderStatus</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name">OrderStatus</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;label)</span></div>
+<div class="block">Creates the constant with its stored label.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>label</code> - text stored in orders.status</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -328,6 +353,11 @@ not permitted.)</div>
 <h3>label</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">label</span>()</div>
+<div class="block">Returns the stored and displayed text.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the stored and displayed text</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -336,6 +366,15 @@ not permitted.)</div>
 <h3>fromLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a></span>&nbsp;<span class="element-name">fromLabel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;label)</span></div>
+<div class="block">Finds the status stored under a label.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>label</code> - text from orders.status</dd>
+<dt>Returns:</dt>
+<dd>the matching status</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if no status has that label</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -344,9 +383,12 @@ not permitted.)</div>
 <h3>toString</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
+<div class="block">Returns the label, so combo boxes and tables show readable text.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>the label, so combo boxes and tables show readable text</dd>
 </dl>
 </div>
 </section>

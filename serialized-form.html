@@ -82,14 +82,17 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>groups</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>, <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="sakaboba/ui/BarChart.Bar.html" title="class in sakaboba.ui">BarChart.Bar</a>&gt;&gt; groups</pre>
+<div class="block">Bars by group name, in first-seen order.</div>
 </li>
 <li class="block-list">
 <h5>subtitle</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a> subtitle</pre>
+<div class="block">Line of explanatory text drawn under the title.</div>
 </li>
 <li class="block-list">
 <h5>title</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a> title</pre>
+<div class="block">Heading drawn at the top of the chart.</div>
 </li>
 </ul>
 </section>
@@ -109,10 +112,12 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>addToCart</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> addToCart</pre>
+<div class="block">Button that adds the selected drink to the cart.</div>
 </li>
 <li class="block-list">
 <h5>busy</h5>
 <pre>boolean busy</pre>
+<div class="block">True while a background task runs, so controls are disabled.</div>
 </li>
 <li class="block-list">
 <h5>cart</h5>
@@ -122,78 +127,97 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>cartModel</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableModel.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableModel</a> cartModel</pre>
+<div class="block">Read-only table model for the current cart.</div>
 </li>
 <li class="block-list">
 <h5>cartTable</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a> cartTable</pre>
+<div class="block">Table listing the cart lines.</div>
 </li>
 <li class="block-list">
 <h5>clearCart</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> clearCart</pre>
+<div class="block">Button that empties the cart.</div>
 </li>
 <li class="block-list">
 <h5>employeeDao</h5>
 <pre><a href="sakaboba/dao/EmployeeDao.html" title="class in sakaboba.dao">EmployeeDao</a> employeeDao</pre>
+<div class="block">Source of the employee picker.</div>
 </li>
 <li class="block-list">
 <h5>employees</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="sakaboba/model/Employee.html" title="class in sakaboba.model">Employee</a>&gt; employees</pre>
+<div class="block">Picker for the employee taking the order.</div>
 </li>
 <li class="block-list">
 <h5>menu</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="sakaboba/model/MenuItem.html" title="class in sakaboba.model">MenuItem</a>&gt; menu</pre>
+<div class="block">Menu items currently shown, in menu table order.</div>
 </li>
 <li class="block-list">
 <h5>menuDao</h5>
 <pre><a href="sakaboba/dao/MenuDao.html" title="class in sakaboba.dao">MenuDao</a> menuDao</pre>
+<div class="block">Source of the menu list.</div>
 </li>
 <li class="block-list">
 <h5>menuModel</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableModel.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableModel</a> menuModel</pre>
+<div class="block">Read-only table model for the menu list.</div>
 </li>
 <li class="block-list">
 <h5>menuTable</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a> menuTable</pre>
+<div class="block">Table listing the menu.</div>
 </li>
 <li class="block-list">
 <h5>orderDao</h5>
 <pre><a href="sakaboba/dao/OrderDao.html" title="class in sakaboba.dao">OrderDao</a> orderDao</pre>
+<div class="block">Saves orders and changes their status.</div>
 </li>
 <li class="block-list">
 <h5>ordersModel</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableModel.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableModel</a> ordersModel</pre>
+<div class="block">Read-only table model for today's orders.</div>
 </li>
 <li class="block-list">
 <h5>ordersTable</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a> ordersTable</pre>
+<div class="block">Table listing today's orders.</div>
 </li>
 <li class="block-list">
 <h5>payment</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="sakaboba/model/PaymentMethod.html" title="enum class in sakaboba.model">PaymentMethod</a>&gt; payment</pre>
+<div class="block">Picker for how the customer pays.</div>
 </li>
 <li class="block-list">
 <h5>quantity</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JSpinner.html" title="class or interface in javax.swing" class="external-link">JSpinner</a> quantity</pre>
+<div class="block">Quantity to add when a drink is added to the cart.</div>
 </li>
 <li class="block-list">
 <h5>reload</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> reload</pre>
+<div class="block">Button that reloads the menu, employees and orders.</div>
 </li>
 <li class="block-list">
 <h5>removeLine</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> removeLine</pre>
+<div class="block">Button that removes the selected cart line.</div>
 </li>
 <li class="block-list">
 <h5>returnOrder</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> returnOrder</pre>
+<div class="block">Button that marks the selected completed order as returned.</div>
 </li>
 <li class="block-list">
 <h5>status</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> status</pre>
+<div class="block">Label showing the latest success or error message.</div>
 </li>
 <li class="block-list">
 <h5>submit</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> submit</pre>
+<div class="block">Button that saves the cart as an order.</div>
 </li>
 <li class="block-list">
 <h5>todaysOrders</h5>
@@ -203,10 +227,12 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>total</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> total</pre>
+<div class="block">Label showing the running cart total.</div>
 </li>
 <li class="block-list">
 <h5>voidOrder</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> voidOrder</pre>
+<div class="block">Button that voids the selected completed order.</div>
 </li>
 </ul>
 </section>
@@ -226,54 +252,67 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>add</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> add</pre>
+<div class="block">Button that adds a new employee from the form.</div>
 </li>
 <li class="block-list">
 <h5>busy</h5>
 <pre>boolean busy</pre>
+<div class="block">True while a background task runs, so controls are disabled.</div>
 </li>
 <li class="block-list">
 <h5>clear</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> clear</pre>
+<div class="block">Button that clears the selection and the form.</div>
 </li>
 <li class="block-list">
 <h5>count</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> count</pre>
+<div class="block">Label showing how many employees are listed.</div>
 </li>
 <li class="block-list">
 <h5>dao</h5>
 <pre><a href="sakaboba/dao/EmployeeDao.html" title="class in sakaboba.dao">EmployeeDao</a> dao</pre>
+<div class="block">Data access for employees.</div>
 </li>
 <li class="block-list">
 <h5>delete</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> delete</pre>
+<div class="block">Button that deletes the selected employee.</div>
 </li>
 <li class="block-list">
 <h5>model</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableModel.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableModel</a> model</pre>
+<div class="block">Read-only table model with ID, name and role columns.</div>
 </li>
 <li class="block-list">
 <h5>name</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> name</pre>
+<div class="block">Input for the employee name.</div>
 </li>
 <li class="block-list">
 <h5>refresh</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> refresh</pre>
+<div class="block">Button that reloads the employee list.</div>
 </li>
 <li class="block-list">
 <h5>role</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> role</pre>
+<div class="block">Input for the employee role.</div>
 </li>
 <li class="block-list">
 <h5>status</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> status</pre>
+<div class="block">Label showing the latest success or error message.</div>
 </li>
 <li class="block-list">
 <h5>table</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a> table</pre>
+<div class="block">Table of employees.</div>
 </li>
 <li class="block-list">
 <h5>update</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> update</pre>
+<div class="block">Button that saves the form onto the selected employee.</div>
 </li>
 </ul>
 </section>
@@ -293,54 +332,67 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>add</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> add</pre>
+<div class="block">Button that adds a new ingredient from the form.</div>
 </li>
 <li class="block-list">
 <h5>busy</h5>
 <pre>boolean busy</pre>
+<div class="block">True while a background task runs, so controls are disabled.</div>
 </li>
 <li class="block-list">
 <h5>clear</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> clear</pre>
+<div class="block">Button that clears the selection and the form.</div>
 </li>
 <li class="block-list">
 <h5>count</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> count</pre>
+<div class="block">Label showing how many ingredients are listed.</div>
 </li>
 <li class="block-list">
 <h5>dao</h5>
 <pre><a href="sakaboba/dao/InventoryDao.html" title="class in sakaboba.dao">InventoryDao</a> dao</pre>
+<div class="block">Data access for ingredients.</div>
 </li>
 <li class="block-list">
 <h5>model</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableModel.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableModel</a> model</pre>
+<div class="block">Read-only table model with ID, name, quantity and unit columns.</div>
 </li>
 <li class="block-list">
 <h5>name</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> name</pre>
+<div class="block">Input for the ingredient name.</div>
 </li>
 <li class="block-list">
 <h5>quantity</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> quantity</pre>
+<div class="block">Input for the quantity on hand.</div>
 </li>
 <li class="block-list">
 <h5>refresh</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> refresh</pre>
+<div class="block">Button that reloads the ingredient list.</div>
 </li>
 <li class="block-list">
 <h5>status</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> status</pre>
+<div class="block">Label showing the latest success or error message.</div>
 </li>
 <li class="block-list">
 <h5>table</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a> table</pre>
+<div class="block">Table of ingredients.</div>
 </li>
 <li class="block-list">
 <h5>unit</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt; unit</pre>
+<div class="block">Picker for the unit of measure.</div>
 </li>
 <li class="block-list">
 <h5>update</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> update</pre>
+<div class="block">Button that saves the form onto the selected ingredient.</div>
 </li>
 </ul>
 </section>
@@ -360,38 +412,47 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>add</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> add</pre>
+<div class="block">Button that adds a new item from the form.</div>
 </li>
 <li class="block-list">
 <h5>addIngredient</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> addIngredient</pre>
+<div class="block">Button that adds the chosen inventory ingredient to the draft.</div>
 </li>
 <li class="block-list">
 <h5>addNewIngredient</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> addNewIngredient</pre>
+<div class="block">Button that adds the new ingredient to the draft.</div>
 </li>
 <li class="block-list">
 <h5>baseRecipe</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="sakaboba/model/MenuItem.html" title="class in sakaboba.model">MenuItem</a>&gt; baseRecipe</pre>
+<div class="block">Picker for the drink whose recipe is copied into the draft.</div>
 </li>
 <li class="block-list">
 <h5>busy</h5>
 <pre>boolean busy</pre>
+<div class="block">True while a background task runs, so controls are disabled.</div>
 </li>
 <li class="block-list">
 <h5>clear</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> clear</pre>
+<div class="block">Button that clears the selection and the form.</div>
 </li>
 <li class="block-list">
 <h5>copyRecipe</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> copyRecipe</pre>
+<div class="block">Button that copies the chosen drink's recipe into the draft.</div>
 </li>
 <li class="block-list">
 <h5>count</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> count</pre>
+<div class="block">Label showing how many items are listed.</div>
 </li>
 <li class="block-list">
 <h5>dao</h5>
 <pre><a href="sakaboba/dao/MenuDao.html" title="class in sakaboba.dao">MenuDao</a> dao</pre>
+<div class="block">Data access for menu items and recipes.</div>
 </li>
 <li class="block-list">
 <h5>draft</h5>
@@ -401,42 +462,52 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>ingredientAmount</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> ingredientAmount</pre>
+<div class="block">Input for the amount of the chosen ingredient one drink uses.</div>
 </li>
 <li class="block-list">
 <h5>ingredientChoice</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="sakaboba/model/Ingredient.html" title="class in sakaboba.model">Ingredient</a>&gt; ingredientChoice</pre>
+<div class="block">Picker for an existing inventory ingredient to add to the draft.</div>
 </li>
 <li class="block-list">
 <h5>inventory</h5>
 <pre><a href="sakaboba/dao/InventoryDao.html" title="class in sakaboba.dao">InventoryDao</a> inventory</pre>
+<div class="block">Data access for the ingredients a recipe can use.</div>
 </li>
 <li class="block-list">
 <h5>model</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableModel.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableModel</a> model</pre>
+<div class="block">Read-only table model with ID, name, size and price columns.</div>
 </li>
 <li class="block-list">
 <h5>name</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> name</pre>
+<div class="block">Input for the item name.</div>
 </li>
 <li class="block-list">
 <h5>newIngredientAmount</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> newIngredientAmount</pre>
+<div class="block">Input for the amount of the new ingredient one drink uses.</div>
 </li>
 <li class="block-list">
 <h5>newIngredientName</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> newIngredientName</pre>
+<div class="block">Input for the name of an ingredient not yet in inventory.</div>
 </li>
 <li class="block-list">
 <h5>newIngredientStock</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> newIngredientStock</pre>
+<div class="block">Input for the starting stock of the new ingredient.</div>
 </li>
 <li class="block-list">
 <h5>newIngredientUnit</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt; newIngredientUnit</pre>
+<div class="block">Picker for the unit of the new ingredient.</div>
 </li>
 <li class="block-list">
 <h5>price</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> price</pre>
+<div class="block">Input for the item price in dollars.</div>
 </li>
 <li class="block-list">
 <h5>recipeModel</h5>
@@ -451,42 +522,52 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>recipeTable</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a> recipeTable</pre>
+<div class="block">Table showing the recipe of the selected item or the seasonal draft.</div>
 </li>
 <li class="block-list">
 <h5>recipeTitle</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> recipeTitle</pre>
+<div class="block">Heading above the recipe table.</div>
 </li>
 <li class="block-list">
 <h5>refresh</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> refresh</pre>
+<div class="block">Button that reloads the menu and inventory.</div>
 </li>
 <li class="block-list">
 <h5>removeLine</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> removeLine</pre>
+<div class="block">Button that removes the selected line from the draft.</div>
 </li>
 <li class="block-list">
 <h5>seasonal</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JCheckBox.html" title="class or interface in javax.swing" class="external-link">JCheckBox</a> seasonal</pre>
+<div class="block">Checkbox that switches the form to create a seasonal item.</div>
 </li>
 <li class="block-list">
 <h5>seasonalFields</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JPanel.html" title="class or interface in javax.swing" class="external-link">JPanel</a> seasonalFields</pre>
+<div class="block">Rows of controls for building a seasonal recipe, shown only in seasonal mode.</div>
 </li>
 <li class="block-list">
 <h5>size</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt; size</pre>
+<div class="block">Picker for the item size.</div>
 </li>
 <li class="block-list">
 <h5>status</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> status</pre>
+<div class="block">Label showing the latest success or error message.</div>
 </li>
 <li class="block-list">
 <h5>table</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a> table</pre>
+<div class="block">Table of menu items.</div>
 </li>
 <li class="block-list">
 <h5>update</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> update</pre>
+<div class="block">Button that saves the form onto the selected item.</div>
 </li>
 </ul>
 </section>
@@ -506,50 +587,62 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>busy</h5>
 <pre>boolean busy</pre>
+<div class="block">True while a background task runs, so controls are disabled.</div>
 </li>
 <li class="block-list">
 <h5>chart</h5>
 <pre><a href="sakaboba/ui/BarChart.html" title="class in sakaboba.ui">BarChart</a> chart</pre>
+<div class="block">Bar chart shown for the product usage report.</div>
 </li>
 <li class="block-list">
 <h5>chartScroll</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JScrollPane.html" title="class or interface in javax.swing" class="external-link">JScrollPane</a> chartScroll</pre>
+<div class="block">Scroll pane wrapping the chart, which is added as a tab only when needed.</div>
 </li>
 <li class="block-list">
 <h5>choice</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JComboBox.html" title="class or interface in javax.swing" class="external-link">JComboBox</a>&lt;<a href="sakaboba/model/ReportType.html" title="enum class in sakaboba.model">ReportType</a>&gt; choice</pre>
+<div class="block">Picker for which report to run.</div>
 </li>
 <li class="block-list">
 <h5>dao</h5>
 <pre><a href="sakaboba/dao/ReportDao.html" title="class in sakaboba.dao">ReportDao</a> dao</pre>
+<div class="block">Data source for report queries and the available date range.</div>
 </li>
 <li class="block-list">
 <h5>end</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> end</pre>
+<div class="block">Input for the last date, as YYYY-MM-DD.</div>
 </li>
 <li class="block-list">
 <h5>generate</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JButton.html" title="class or interface in javax.swing" class="external-link">JButton</a> generate</pre>
+<div class="block">Button that runs the selected report.</div>
 </li>
 <li class="block-list">
 <h5>hasResults</h5>
 <pre>boolean hasResults</pre>
+<div class="block">True while the table shows results for the current filters.</div>
 </li>
 <li class="block-list">
 <h5>results</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTabbedPane.html" title="class or interface in javax.swing" class="external-link">JTabbedPane</a> results</pre>
+<div class="block">Tabs holding the table and, for product usage, the chart.</div>
 </li>
 <li class="block-list">
 <h5>start</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTextField.html" title="class or interface in javax.swing" class="external-link">JTextField</a> start</pre>
+<div class="block">Input for the first date, as YYYY-MM-DD.</div>
 </li>
 <li class="block-list">
 <h5>status</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JLabel.html" title="class or interface in javax.swing" class="external-link">JLabel</a> status</pre>
+<div class="block">Label showing the latest success or error message.</div>
 </li>
 <li class="block-list">
 <h5>table</h5>
 <pre><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/JTable.html" title="class or interface in javax.swing" class="external-link">JTable</a> table</pre>
+<div class="block">Table showing the report rows.</div>
 </li>
 </ul>
 </section>

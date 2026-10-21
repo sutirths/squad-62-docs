@@ -119,10 +119,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private static final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.logging/java/util/logging/Logger.html" title="class or interface in java.util.logging" class="external-link">Logger</a></code></div>
 <div class="col-second even-row-color"><code><a href="#LOG" class="member-name-link">LOG</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Logger for saved orders and failures.</div>
+</div>
 <div class="col-first odd-row-color"><code>private static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#MAX_QUANTITY" class="member-name-link">MAX_QUANTITY</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Largest total quantity allowed for one drink in an order.</div>
+</div>
 </div>
 </section>
 </li>
@@ -153,7 +157,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changeStatus(int,sakaboba.model.OrderStatus)" class="member-name-link">changeStatus</a><wbr>(int&nbsp;orderId,
  <a href="../model/OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a>&nbsp;target)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Moves a completed order to a new status; other statuses cannot be changed.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/OrderReceipt.html" title="class in sakaboba.model">OrderReceipt</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createOrder(int,java.util.List,sakaboba.model.PaymentMethod)" class="member-name-link">createOrder</a><wbr>(int&nbsp;employeeId,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/OrderLine.html" title="class in sakaboba.model">OrderLine</a>&gt;&nbsp;lines,
@@ -171,22 +177,32 @@ loadScripts(document, 'script');</script>
  int&nbsp;employeeId,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;total,
  <a href="../model/PaymentMethod.html" title="enum class in sakaboba.model">PaymentMethod</a>&nbsp;paymentMethod)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Inserts the orders row with the next free ID, the current time and a completed status.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>private static <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#loadPrices(java.sql.Connection,java.lang.Iterable)" class="member-name-link">loadPrices</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;connection,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;ids)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Reads the current price of each menu item from the database.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>private static <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#mergeLines(java.util.List)" class="member-name-link">mergeLines</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/OrderLine.html" title="class in sakaboba.model">OrderLine</a>&gt;&nbsp;lines)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Validates cart lines and adds up quantities for repeated menu items.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>private static int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#nextId(java.sql.Connection,java.lang.String)" class="member-name-link">nextId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;connection,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;table)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Returns the next unused ID for a table, which has no identity sequence.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>private static void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#requireEmployee(java.sql.Connection,int)" class="member-name-link">requireEmployee</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;connection,
  int&nbsp;employeeId)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Checks that an employee row exists.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#returnOrder(int)" class="member-name-link">returnOrder</a><wbr>(int&nbsp;orderId)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -219,6 +235,7 @@ loadScripts(document, 'script');</script>
 <h3>LOG</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.logging/java/util/logging/Logger.html" title="class or interface in java.util.logging" class="external-link">Logger</a></span>&nbsp;<span class="element-name">LOG</span></div>
+<div class="block">Logger for saved orders and failures.</div>
 </div>
 </section>
 </li>
@@ -227,6 +244,7 @@ loadScripts(document, 'script');</script>
 <h3>MAX_QUANTITY</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MAX_QUANTITY</span></div>
+<div class="block">Largest total quantity allowed for one drink in an order.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -271,6 +289,17 @@ loadScripts(document, 'script');</script>
  <a href="../model/PaymentMethod.html" title="enum class in sakaboba.model">PaymentMethod</a>&nbsp;paymentMethod)</span></div>
 <div class="block">Saves a completed order for the employee. The total comes from menuitem.price, never from the
  caller, and repeated menu items are merged because orderitem is unique per (order, item).</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>employeeId</code> - ID of the employee taking the order</dd>
+<dd><code>lines</code> - cart lines; must not be empty</dd>
+<dd><code>paymentMethod</code> - how the customer paid</dd>
+<dt>Returns:</dt>
+<dd>the new order's ID and total</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the employee, payment method or lines are invalid</dd>
+<dd><code><a href="DataAccessException.html" title="class in sakaboba.dao">DataAccessException</a></code> - if an item or employee no longer exists or the write fails</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -280,6 +309,12 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/OrderSummary.html" title="class in sakaboba.model">OrderSummary</a>&gt;</span>&nbsp;<span class="element-name">findToday</span>()</div>
 <div class="block">Today's orders, newest first, including voided and returned ones so they stay visible.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>summaries of orders created since local midnight</dd>
+<dt>Throws:</dt>
+<dd><code><a href="DataAccessException.html" title="class in sakaboba.dao">DataAccessException</a></code> - if the database cannot be read</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -289,6 +324,13 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">voidOrder</span><wbr><span class="parameters">(int&nbsp;orderId)</span></div>
 <div class="block">Marks a completed order as voided. The order and its lines are kept for reporting.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>orderId</code> - ID of the order to void</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if no order is selected</dd>
+<dd><code><a href="DataAccessException.html" title="class in sakaboba.dao">DataAccessException</a></code> - if the order is not completed or the update fails</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -298,6 +340,13 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">returnOrder</span><wbr><span class="parameters">(int&nbsp;orderId)</span></div>
 <div class="block">Marks a completed order as returned. The order and its lines are kept for reporting.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>orderId</code> - ID of the order to return</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if no order is selected</dd>
+<dd><code><a href="DataAccessException.html" title="class in sakaboba.dao">DataAccessException</a></code> - if the order is not completed or the update fails</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -307,6 +356,12 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">changeStatus</span><wbr><span class="parameters">(int&nbsp;orderId,
  <a href="../model/OrderStatus.html" title="enum class in sakaboba.model">OrderStatus</a>&nbsp;target)</span></div>
+<div class="block">Moves a completed order to a new status; other statuses cannot be changed.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>orderId</code> - ID of the order</dd>
+<dd><code>target</code> - status to set, either voided or returned</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -315,6 +370,15 @@ loadScripts(document, 'script');</script>
 <h3>mergeLines</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">mergeLines</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/OrderLine.html" title="class in sakaboba.model">OrderLine</a>&gt;&nbsp;lines)</span></div>
+<div class="block">Validates cart lines and adds up quantities for repeated menu items.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>lines</code> - cart lines</dd>
+<dt>Returns:</dt>
+<dd>total quantity per menu item ID, in first-seen order</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the cart is empty or a quantity is invalid</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -325,9 +389,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">requireEmployee</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;connection,
  int&nbsp;employeeId)</span>
                              throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Checks that an employee row exists.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>connection</code> - open connection inside the transaction</dd>
+<dd><code>employeeId</code> - employee ID to look up</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if the query fails</dd>
 </dl>
 </div>
 </section>
@@ -339,9 +407,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>, <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</span>&nbsp;<span class="element-name">loadPrices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;connection,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;ids)</span>
                                             throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Reads the current price of each menu item from the database.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>connection</code> - open connection inside the transaction</dd>
+<dd><code>ids</code> - menu item IDs in the cart</dd>
+<dt>Returns:</dt>
+<dd>price per menu item ID</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if the query fails</dd>
 </dl>
 </div>
 </section>
@@ -355,9 +429,17 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;total,
  <a href="../model/PaymentMethod.html" title="enum class in sakaboba.model">PaymentMethod</a>&nbsp;paymentMethod)</span>
                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Inserts the orders row with the next free ID, the current time and a completed status.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>connection</code> - open connection inside the transaction</dd>
+<dd><code>employeeId</code> - employee taking the order</dd>
+<dd><code>total</code> - order total computed from menu prices</dd>
+<dd><code>paymentMethod</code> - how the customer paid</dd>
+<dt>Returns:</dt>
+<dd>the new order's ID</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if the insert fails</dd>
 </dl>
 </div>
 </section>
@@ -369,9 +451,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">nextId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;connection,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;table)</span>
                    throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Returns the next unused ID for a table, which has no identity sequence.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>connection</code> - open connection inside the transaction</dd>
+<dd><code>table</code> - table name; must be a literal from this class</dd>
+<dt>Returns:</dt>
+<dd>the largest existing ID plus one</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if the query fails</dd>
 </dl>
 </div>
 </section>

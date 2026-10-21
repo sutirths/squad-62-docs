@@ -97,6 +97,11 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-ingredient">ingredient</span></code> - the ingredient, existing or new</dd>
+<dd><code><span id="param-quantity">quantity</span></code> - amount one drink uses, in the ingredient's unit</dd>
+</dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">RecipeLine</span>(<a href="Ingredient.html" title="class in sakaboba.model">Ingredient</a>&nbsp;ingredient, <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;quantity)
@@ -120,12 +125,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>private final <a href="Ingredient.html" title="class in sakaboba.model">Ingredient</a></code></div>
 <div class="col-second even-row-color"><code><a href="#ingredient" class="member-name-link">ingredient</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>ingredient</code> record component.</div>
+<div class="block">The field for the <a href="#param-ingredient"><code>ingredient</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#quantity" class="member-name-link">quantity</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The field for the <code>quantity</code> record component.</div>
+<div class="block">The field for the <a href="#param-quantity"><code>quantity</code></a> record component.</div>
 </div>
 </div>
 </section>
@@ -170,15 +175,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Ingredient.html" title="class in sakaboba.model">Ingredient</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#ingredient()" class="member-name-link">ingredient</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>ingredient</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-ingredient"><code>ingredient</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isNewIngredient()" class="member-name-link">isNewIngredient</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Tells whether the ingredient still has to be created in inventory.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quantity()" class="member-name-link">quantity</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>quantity</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-quantity"><code>quantity</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -207,7 +214,7 @@ loadScripts(document, 'script');</script>
 <h3>ingredient</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="Ingredient.html" title="class in sakaboba.model">Ingredient</a></span>&nbsp;<span class="element-name">ingredient</span></div>
-<div class="block">The field for the <code>ingredient</code> record component.</div>
+<div class="block">The field for the <a href="#param-ingredient"><code>ingredient</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -216,7 +223,7 @@ loadScripts(document, 'script');</script>
 <h3>quantity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">quantity</span></div>
-<div class="block">The field for the <code>quantity</code> record component.</div>
+<div class="block">The field for the <a href="#param-quantity"><code>quantity</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -237,8 +244,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>RecipeLine</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>ingredient</code> - the value for the <code>ingredient</code> record component</dd>
-<dd><code>quantity</code> - the value for the <code>quantity</code> record component</dd>
+<dd><code>ingredient</code> - the value for the <a href="#param-ingredient"><code>ingredient</code></a> record component</dd>
+<dd><code>quantity</code> - the value for the <a href="#param-quantity"><code>quantity</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -256,6 +263,11 @@ loadScripts(document, 'script');</script>
 <h3>isNewIngredient</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isNewIngredient</span>()</div>
+<div class="block">Tells whether the ingredient still has to be created in inventory.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>true if the ingredient has no ID yet</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -311,10 +323,10 @@ loadScripts(document, 'script');</script>
 <h3>ingredient</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Ingredient.html" title="class in sakaboba.model">Ingredient</a></span>&nbsp;<span class="element-name">ingredient</span>()</div>
-<div class="block">Returns the value of the <code>ingredient</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-ingredient"><code>ingredient</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>ingredient</code> record component</dd>
+<dd>the value of the <a href="#param-ingredient"><code>ingredient</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -324,10 +336,10 @@ loadScripts(document, 'script');</script>
 <h3>quantity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">quantity</span>()</div>
-<div class="block">Returns the value of the <code>quantity</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-quantity"><code>quantity</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>quantity</code> record component</dd>
+<dd>the value of the <a href="#param-quantity"><code>quantity</code></a> record component</dd>
 </dl>
 </div>
 </section>

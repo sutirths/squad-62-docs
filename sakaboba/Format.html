@@ -110,7 +110,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private static final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/text/NumberFormat.html" title="class or interface in java.text" class="external-link">NumberFormat</a></code></div>
 <div class="col-second even-row-color"><code><a href="#CURRENCY" class="member-name-link">CURRENCY</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">US currency formatter shared by every caller.</div>
+</div>
 </div>
 </section>
 </li>
@@ -125,7 +127,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private </code></div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Format</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Not instantiable; all members are static.</div>
+</div>
 </div>
 </section>
 </li>
@@ -142,10 +146,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#money(java.math.BigDecimal)" class="member-name-link">money</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;amount)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Formats an amount as US currency.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#percent(java.math.BigDecimal)" class="member-name-link">percent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;share)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Formats a percentage with one decimal place.</div>
+</div>
 </div>
 </div>
 </div>
@@ -168,6 +176,7 @@ loadScripts(document, 'script');</script>
 <h3>CURRENCY</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/text/NumberFormat.html" title="class or interface in java.text" class="external-link">NumberFormat</a></span>&nbsp;<span class="element-name">CURRENCY</span></div>
+<div class="block">US currency formatter shared by every caller.</div>
 </div>
 </section>
 </li>
@@ -184,6 +193,7 @@ loadScripts(document, 'script');</script>
 <h3>Format</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name">Format</span>()</div>
+<div class="block">Not instantiable; all members are static.</div>
 </div>
 </section>
 </li>
@@ -200,6 +210,13 @@ loadScripts(document, 'script');</script>
 <h3>money</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">money</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;amount)</span></div>
+<div class="block">Formats an amount as US currency.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>amount</code> - the amount to format</dd>
+<dt>Returns:</dt>
+<dd>the amount with a dollar sign and two decimals, for example <code>$4.50</code></dd>
+</dl>
 </div>
 </section>
 </li>
@@ -208,6 +225,13 @@ loadScripts(document, 'script');</script>
 <h3>percent</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">percent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;share)</span></div>
+<div class="block">Formats a percentage with one decimal place.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>share</code> - the percentage value, for example 12.34 for 12.34%</dd>
+<dt>Returns:</dt>
+<dd>the value rounded to one decimal followed by a percent sign, such as <code>12.3%</code></dd>
+</dl>
 </div>
 </section>
 </li>

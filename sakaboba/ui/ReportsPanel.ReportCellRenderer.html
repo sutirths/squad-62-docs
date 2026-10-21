@@ -113,6 +113,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">private static final class </span><span class="element-name type-name-label">ReportsPanel.ReportCellRenderer</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableCellRenderer.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableCellRenderer</a></span></div>
+<div class="block">Right-aligns numbers, formats currency and percentages, and highlights the TOTAL row.</div>
 </div>
 </section>
 <section class="summary">
@@ -149,7 +150,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private final <a href="../model/ReportData.Column.html" title="class in sakaboba.model">ReportData.Column</a></code></div>
 <div class="col-second even-row-color"><code><a href="#column" class="member-name-link">column</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column whose values this renderer draws.</div>
+</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-javax.swing.table.DefaultTableCellRenderer">Fields inherited from class&nbsp;javax.swing.table.<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableCellRenderer.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableCellRenderer</a></h3>
@@ -180,7 +183,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(sakaboba.model.ReportData.Column)" class="member-name-link">ReportCellRenderer</a><wbr>(<a href="../model/ReportData.Column.html" title="class in sakaboba.model">ReportData.Column</a>&nbsp;column)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a renderer for one report column.</div>
+</div>
 </div>
 </section>
 </li>
@@ -202,7 +207,9 @@ loadScripts(document, 'script');</script>
  boolean&nbsp;focused,
  int&nbsp;row,
  int&nbsp;col)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Formats the value, then styles the row.</div>
+</div>
 </div>
 </div>
 </div>
@@ -240,6 +247,7 @@ loadScripts(document, 'script');</script>
 <h3>column</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="../model/ReportData.Column.html" title="class in sakaboba.model">ReportData.Column</a></span>&nbsp;<span class="element-name">column</span></div>
+<div class="block">Column whose values this renderer draws.</div>
 </div>
 </section>
 </li>
@@ -256,6 +264,11 @@ loadScripts(document, 'script');</script>
 <h3>ReportCellRenderer</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="element-name">ReportCellRenderer</span><wbr><span class="parameters">(<a href="../model/ReportData.Column.html" title="class in sakaboba.model">ReportData.Column</a>&nbsp;column)</span></div>
+<div class="block">Creates a renderer for one report column.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>column</code> - column definition that decides alignment and formatting</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -277,11 +290,21 @@ loadScripts(document, 'script');</script>
  boolean&nbsp;focused,
  int&nbsp;row,
  int&nbsp;col)</span></div>
+<div class="block">Formats the value, then styles the row.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/TableCellRenderer.html#getTableCellRendererComponent(javax.swing.JTable,java.lang.Object,boolean,boolean,int,int)" title="class or interface in javax.swing.table" class="external-link">getTableCellRendererComponent</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/TableCellRenderer.html" title="class or interface in javax.swing.table" class="external-link">TableCellRenderer</a></code></dd>
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableCellRenderer.html#getTableCellRendererComponent(javax.swing.JTable,java.lang.Object,boolean,boolean,int,int)" title="class or interface in javax.swing.table" class="external-link">getTableCellRendererComponent</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.desktop/javax/swing/table/DefaultTableCellRenderer.html" title="class or interface in javax.swing.table" class="external-link">DefaultTableCellRenderer</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>table</code> - table being drawn</dd>
+<dd><code>value</code> - cell value</dd>
+<dd><code>selected</code> - whether the row is selected</dd>
+<dd><code>focused</code> - whether the cell has focus</dd>
+<dd><code>row</code> - row index</dd>
+<dd><code>col</code> - column index</dd>
+<dt>Returns:</dt>
+<dd>the component used to draw the cell</dd>
 </dl>
 </div>
 </section>

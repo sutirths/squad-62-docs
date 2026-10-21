@@ -104,6 +104,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">InventoryDao</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Ingredient inventory persistence. Each operation opens and closes its own connection.</div>
 </div>
 </section>
 <section class="summary">
@@ -119,16 +120,24 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private static final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.logging/java/util/logging/Logger.html" title="class or interface in java.util.logging" class="external-link">Logger</a></code></div>
 <div class="col-second even-row-color"><code><a href="#LOG" class="member-name-link">LOG</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Logger for failed database operations.</div>
+</div>
 <div class="col-first odd-row-color"><code>private static final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#MAX_QUANTITY" class="member-name-link">MAX_QUANTITY</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Largest quantity that fits the DECIMAL(10,2) column.</div>
+</div>
 <div class="col-first even-row-color"><code>private static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#NAME_LIMIT" class="member-name-link">NAME_LIMIT</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Maximum ingredient name length in characters.</div>
+</div>
 <div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#UNITS" class="member-name-link">UNITS</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Units an ingredient may be stocked in, in display order.</div>
+</div>
 </div>
 </section>
 </li>
@@ -159,39 +168,59 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private <a href="DataAccessException.html" title="class in sakaboba.dao">DataAccessException</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#failure(java.lang.String,java.sql.SQLException)" class="member-name-link">failure</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a>&nbsp;error)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Logs a database failure and wraps it for display.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#findAll()" class="member-name-link">findAll</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads every ingredient, ordered by name.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#insert(java.lang.String,java.math.BigDecimal,java.lang.String)" class="member-name-link">insert</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;quantity,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unit)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds an ingredient after validating its fields, assigning the next free ID in one transaction.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>(package private) static <a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#insertRow(java.sql.Connection,sakaboba.model.Ingredient)" class="member-name-link">insertRow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;connection,
  <a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a>&nbsp;clean)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Inserts an already validated ingredient inside the caller's transaction, which must hold
+ the ingredient table lock.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(int,java.lang.String,java.math.BigDecimal,java.lang.String)" class="member-name-link">update</a><wbr>(int&nbsp;id,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;quantity,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unit)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Changes an existing ingredient's name, quantity and unit.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>(package private) static <a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#validate(java.lang.String,java.math.BigDecimal,java.lang.String)" class="member-name-link">validate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;quantity,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unit)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Checks a new ingredient's name, quantity and unit.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>private static <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#validateName(java.lang.String)" class="member-name-link">validateName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Trims and checks an ingredient name.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>private static <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#validateQuantity(java.math.BigDecimal)" class="member-name-link">validateQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Checks a quantity against the DECIMAL(10,2) column: non-negative with at most 8 digits
+ before the decimal point.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>private static <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#validateUnit(java.lang.String)" class="member-name-link">validateUnit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Checks that a unit is one of <a href="#UNITS"><code>UNITS</code></a>.</div>
+</div>
 </div>
 </div>
 </div>
@@ -214,6 +243,7 @@ loadScripts(document, 'script');</script>
 <h3>LOG</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.logging/java/util/logging/Logger.html" title="class or interface in java.util.logging" class="external-link">Logger</a></span>&nbsp;<span class="element-name">LOG</span></div>
+<div class="block">Logger for failed database operations.</div>
 </div>
 </section>
 </li>
@@ -222,6 +252,7 @@ loadScripts(document, 'script');</script>
 <h3>UNITS</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">UNITS</span></div>
+<div class="block">Units an ingredient may be stocked in, in display order.</div>
 </div>
 </section>
 </li>
@@ -230,6 +261,7 @@ loadScripts(document, 'script');</script>
 <h3>NAME_LIMIT</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">NAME_LIMIT</span></div>
+<div class="block">Maximum ingredient name length in characters.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -246,6 +278,7 @@ loadScripts(document, 'script');</script>
 <h3>MAX_QUANTITY</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">MAX_QUANTITY</span></div>
+<div class="block">Largest quantity that fits the DECIMAL(10,2) column.</div>
 </div>
 </section>
 </li>
@@ -278,6 +311,13 @@ loadScripts(document, 'script');</script>
 <h3>findAll</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a>&gt;</span>&nbsp;<span class="element-name">findAll</span>()</div>
+<div class="block">Loads every ingredient, ordered by name.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>all ingredients with their stock on hand</dd>
+<dt>Throws:</dt>
+<dd><code><a href="DataAccessException.html" title="class in sakaboba.dao">DataAccessException</a></code> - if the database cannot be read</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -288,6 +328,18 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a></span>&nbsp;<span class="element-name">insert</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;quantity,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unit)</span></div>
+<div class="block">Adds an ingredient after validating its fields, assigning the next free ID in one transaction.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - ingredient name, required, at most 100 characters</dd>
+<dd><code>quantity</code> - stock on hand, 0 or more; rounded to 2 decimals</dd>
+<dd><code>unit</code> - one of <a href="#UNITS"><code>UNITS</code></a></dd>
+<dt>Returns:</dt>
+<dd>the saved ingredient including its new ID</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if a field is invalid</dd>
+<dd><code><a href="DataAccessException.html" title="class in sakaboba.dao">DataAccessException</a></code> - if the database write fails</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -299,6 +351,17 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;quantity,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unit)</span></div>
+<div class="block">Changes an existing ingredient's name, quantity and unit.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>id</code> - ID of the ingredient to change</dd>
+<dd><code>name</code> - new name, required, at most 100 characters</dd>
+<dd><code>quantity</code> - new stock on hand, 0 or more; rounded to 2 decimals</dd>
+<dd><code>unit</code> - one of <a href="#UNITS"><code>UNITS</code></a></dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the ID or a field is invalid</dd>
+<dd><code><a href="DataAccessException.html" title="class in sakaboba.dao">DataAccessException</a></code> - if the ingredient no longer exists or the write fails</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -309,6 +372,17 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a></span>&nbsp;<span class="element-name">validate</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;quantity,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;unit)</span></div>
+<div class="block">Checks a new ingredient's name, quantity and unit.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - raw name from the form</dd>
+<dd><code>quantity</code> - raw quantity from the form</dd>
+<dd><code>unit</code> - raw unit from the form</dd>
+<dt>Returns:</dt>
+<dd>the cleaned ingredient, with ID 0 until it is inserted</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if a field is invalid</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -319,9 +393,16 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a></span>&nbsp;<span class="element-name">insertRow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;connection,
  <a href="../model/Ingredient.html" title="class in sakaboba.model">Ingredient</a>&nbsp;clean)</span>
                      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Inserts an already validated ingredient inside the caller's transaction, which must hold
+ the ingredient table lock.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>connection</code> - open connection inside the caller's transaction</dd>
+<dd><code>clean</code> - ingredient returned by <a href="#validate(java.lang.String,java.math.BigDecimal,java.lang.String)"><code>validate(java.lang.String, java.math.BigDecimal, java.lang.String)</code></a></dd>
+<dt>Returns:</dt>
+<dd>the ingredient with its newly assigned ID</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if the insert fails</dd>
 </dl>
 </div>
 </section>
@@ -331,6 +412,15 @@ loadScripts(document, 'script');</script>
 <h3>validateName</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">validateName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block">Trims and checks an ingredient name.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - raw name from the form</dd>
+<dt>Returns:</dt>
+<dd>the trimmed name</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if it is blank or too long</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -339,6 +429,16 @@ loadScripts(document, 'script');</script>
 <h3>validateQuantity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">validateQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;value)</span></div>
+<div class="block">Checks a quantity against the DECIMAL(10,2) column: non-negative with at most 8 digits
+ before the decimal point.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - raw quantity from the form</dd>
+<dt>Returns:</dt>
+<dd>the quantity rounded to 2 decimals</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if it is missing, negative or too large</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -347,6 +447,15 @@ loadScripts(document, 'script');</script>
 <h3>validateUnit</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">validateUnit</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block">Checks that a unit is one of <a href="#UNITS"><code>UNITS</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - raw unit from the form</dd>
+<dt>Returns:</dt>
+<dd>the trimmed unit</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the unit is not allowed</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -356,6 +465,14 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type"><a href="DataAccessException.html" title="class in sakaboba.dao">DataAccessException</a></span>&nbsp;<span class="element-name">failure</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a>&nbsp;error)</span></div>
+<div class="block">Logs a database failure and wraps it for display.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>message</code> - user-displayable message</dd>
+<dd><code>error</code> - the underlying SQL error</dd>
+<dt>Returns:</dt>
+<dd>the exception to throw</dd>
+</dl>
 </div>
 </section>
 </li>

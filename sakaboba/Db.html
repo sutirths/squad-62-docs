@@ -112,13 +112,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private static final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.logging/java/util/logging/Logger.html" title="class or interface in java.util.logging" class="external-link">Logger</a></code></div>
 <div class="col-second even-row-color"><code><a href="#LOG" class="member-name-link">LOG</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Logger for connection attempts and failures.</div>
+</div>
 <div class="col-first odd-row-color"><code>private static final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#PROPERTIES_FILE" class="member-name-link">PROPERTIES_FILE</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Location of the connection settings, relative to the working directory.</div>
+</div>
 <div class="col-first even-row-color"><code>private static <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a></code></div>
 <div class="col-second even-row-color"><code><a href="#settings" class="member-name-link">settings</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Settings loaded from <a href="#PROPERTIES_FILE"><code>PROPERTIES_FILE</code></a> on first use, then reused.</div>
+</div>
 </div>
 </section>
 </li>
@@ -133,7 +139,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private </code></div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Db</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Not instantiable; all members are static.</div>
+</div>
 </div>
 </section>
 </li>
@@ -155,7 +163,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>private static <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#settings()" class="member-name-link">settings</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Loads db.properties the first time it is needed and caches the result.</div>
+</div>
 </div>
 </div>
 </div>
@@ -178,6 +188,7 @@ loadScripts(document, 'script');</script>
 <h3>LOG</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.logging/java/util/logging/Logger.html" title="class or interface in java.util.logging" class="external-link">Logger</a></span>&nbsp;<span class="element-name">LOG</span></div>
+<div class="block">Logger for connection attempts and failures.</div>
 </div>
 </section>
 </li>
@@ -186,6 +197,7 @@ loadScripts(document, 'script');</script>
 <h3>PROPERTIES_FILE</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">PROPERTIES_FILE</span></div>
+<div class="block">Location of the connection settings, relative to the working directory.</div>
 </div>
 </section>
 </li>
@@ -194,6 +206,7 @@ loadScripts(document, 'script');</script>
 <h3>settings</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a></span>&nbsp;<span class="element-name">settings</span></div>
+<div class="block">Settings loaded from <a href="#PROPERTIES_FILE"><code>PROPERTIES_FILE</code></a> on first use, then reused.</div>
 </div>
 </section>
 </li>
@@ -210,6 +223,7 @@ loadScripts(document, 'script');</script>
 <h3>Db</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="element-name">Db</span>()</div>
+<div class="block">Not instantiable; all members are static.</div>
 </div>
 </section>
 </li>
@@ -227,9 +241,12 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a></span>&nbsp;<span class="element-name">settings</span>()
                             throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Loads db.properties the first time it is needed and caches the result.</div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>the loaded connection settings</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if the file is missing or cannot be read</dd>
 </dl>
 </div>
 </section>
@@ -242,8 +259,10 @@ loadScripts(document, 'script');</script>
                           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
 <div class="block">Returns a new connection; use try-with-resources so it is always closed.</div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>an open connection built from the db.url, db.user and db.password settings</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if the settings are unavailable or the database cannot be reached</dd>
 </dl>
 </div>
 </section>

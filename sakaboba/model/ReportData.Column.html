@@ -103,6 +103,13 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-label">label</span></code> - column heading</dd>
+<dd><code><span id="param-type">type</span></code> - Java type of the values, used for alignment and sorting</dd>
+<dd><code><span id="param-money">money</span></code> - true if values should be shown as currency</dd>
+<dd><code><span id="param-percent">percent</span></code> - true if values should be shown as percentages</dd>
+</dl>
+<dl class="notes">
 <dt>Enclosing class:</dt>
 <dd><code><a href="ReportData.html" title="class in sakaboba.model">ReportData</a></code></dd>
 </dl>
@@ -110,6 +117,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">ReportData.Column</span>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;label, <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;type, boolean&nbsp;money, boolean&nbsp;percent)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">One report column.</div>
 </div>
 </section>
 <section class="summary">
@@ -126,22 +134,22 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#label" class="member-name-link">label</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>label</code> record component.</div>
+<div class="block">The field for the <a href="#param-label"><code>label</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color"><code>private final boolean</code></div>
 <div class="col-second odd-row-color"><code><a href="#money" class="member-name-link">money</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The field for the <code>money</code> record component.</div>
+<div class="block">The field for the <a href="#param-money"><code>money</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color"><code>private final boolean</code></div>
 <div class="col-second even-row-color"><code><a href="#percent" class="member-name-link">percent</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>percent</code> record component.</div>
+<div class="block">The field for the <a href="#param-percent"><code>percent</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;?&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#type" class="member-name-link">type</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The field for the <code>type</code> record component.</div>
+<div class="block">The field for the <a href="#param-type"><code>type</code></a> record component.</div>
 </div>
 </div>
 </section>
@@ -157,7 +165,9 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.Class,boolean)" class="member-name-link">Column</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;label,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;type,
  boolean&nbsp;money)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a column that is not a percentage.</div>
+</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.Class,boolean,boolean)" class="member-name-link">Column</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;label,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;type,
  boolean&nbsp;money,
@@ -192,17 +202,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#label()" class="member-name-link">label</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>label</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-label"><code>label</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#money()" class="member-name-link">money</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>money</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-money"><code>money</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#percent()" class="member-name-link">percent</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>percent</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-percent"><code>percent</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -212,7 +222,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;?&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type()" class="member-name-link">type</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>type</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-type"><code>type</code></a> record component.</div>
 </div>
 </div>
 </div>
@@ -236,7 +246,7 @@ loadScripts(document, 'script');</script>
 <h3>label</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">label</span></div>
-<div class="block">The field for the <code>label</code> record component.</div>
+<div class="block">The field for the <a href="#param-label"><code>label</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -245,7 +255,7 @@ loadScripts(document, 'script');</script>
 <h3>type</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;</span>&nbsp;<span class="element-name">type</span></div>
-<div class="block">The field for the <code>type</code> record component.</div>
+<div class="block">The field for the <a href="#param-type"><code>type</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -254,7 +264,7 @@ loadScripts(document, 'script');</script>
 <h3>money</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">money</span></div>
-<div class="block">The field for the <code>money</code> record component.</div>
+<div class="block">The field for the <a href="#param-money"><code>money</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -263,7 +273,7 @@ loadScripts(document, 'script');</script>
 <h3>percent</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">percent</span></div>
-<div class="block">The field for the <code>percent</code> record component.</div>
+<div class="block">The field for the <a href="#param-percent"><code>percent</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -282,6 +292,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Column</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;label,
  <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;type,
  boolean&nbsp;money)</span></div>
+<div class="block">Creates a column that is not a percentage.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>label</code> - column heading</dd>
+<dd><code>type</code> - Java type of the values</dd>
+<dd><code>money</code> - true if values should be shown as currency</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -296,10 +313,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>Column</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>label</code> - the value for the <code>label</code> record component</dd>
-<dd><code>type</code> - the value for the <code>type</code> record component</dd>
-<dd><code>money</code> - the value for the <code>money</code> record component</dd>
-<dd><code>percent</code> - the value for the <code>percent</code> record component</dd>
+<dd><code>label</code> - the value for the <a href="#param-label"><code>label</code></a> record component</dd>
+<dd><code>type</code> - the value for the <a href="#param-type"><code>type</code></a> record component</dd>
+<dd><code>money</code> - the value for the <a href="#param-money"><code>money</code></a> record component</dd>
+<dd><code>percent</code> - the value for the <a href="#param-percent"><code>percent</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -364,10 +381,10 @@ loadScripts(document, 'script');</script>
 <h3>label</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">label</span>()</div>
-<div class="block">Returns the value of the <code>label</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-label"><code>label</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>label</code> record component</dd>
+<dd>the value of the <a href="#param-label"><code>label</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -377,10 +394,10 @@ loadScripts(document, 'script');</script>
 <h3>type</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;</span>&nbsp;<span class="element-name">type</span>()</div>
-<div class="block">Returns the value of the <code>type</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-type"><code>type</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>type</code> record component</dd>
+<dd>the value of the <a href="#param-type"><code>type</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -390,10 +407,10 @@ loadScripts(document, 'script');</script>
 <h3>money</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">money</span>()</div>
-<div class="block">Returns the value of the <code>money</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-money"><code>money</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>money</code> record component</dd>
+<dd>the value of the <a href="#param-money"><code>money</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -403,10 +420,10 @@ loadScripts(document, 'script');</script>
 <h3>percent</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">percent</span>()</div>
-<div class="block">Returns the value of the <code>percent</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-percent"><code>percent</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>percent</code> record component</dd>
+<dd>the value of the <a href="#param-percent"><code>percent</code></a> record component</dd>
 </dl>
 </div>
 </section>
